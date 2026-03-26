@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineer Design Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("page-preload");</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top-nav">
+  <a class="nav-brand" href="#top">
+    <span class="brand-mark" aria-hidden="true">
+  <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+    <path d="M4.5 10.5 12 4l7.5 6.5"></path>
+    <path d="M7.5 9.75V20h9V9.75"></path>
+    <path d="M10.25 20v-5.25h3.5V20"></path>
+  </svg>
+</span>
+    <span class="brand-copy">
+      <small>ESC102 Robotic Arm Design</small>
+    </span>
+  </a>
+
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+    Menu
+  </button>
+
+  <nav id="site-nav" class="site-nav" aria-label="Primary">
+    <a href="#position">Position</a>
+    <a href="#praxis-1">Praxis I</a>
+    <a href="#bridge">CIV102</a>
+    <a href="#robot-arm">Robot Arm</a>
+    <a href="#ctmf-index">CTMF Bank</a>
+    <a href="#references">References</a>
+  </nav>
+</header>
+
+<aside class="section-rail" aria-label="Section progress">
+  <div class="section-rail__viewport">
+    <div class="section-rail__focus" aria-hidden="true"></div>
+    <a href="#position" class="section-rail__item active" data-section-link="position"><strong>Position</strong></a>
+    <a href="#praxis-1" class="section-rail__item" data-section-link="praxis-1"><strong>Praxis I</strong></a>
+    <a href="#bridge" class="section-rail__item" data-section-link="bridge"><strong>CIV102</strong></a>
+    <a href="#robot-arm" class="section-rail__item" data-section-link="robot-arm"><strong>Robot Arm</strong></a>
+    <a href="#ctmf-index" class="section-rail__item" data-section-link="ctmf-index"><strong>CTMF Bank</strong></a>
+    <a href="#references" class="section-rail__item" data-section-link="references"><strong>References</strong></a>
+  </div>
+</aside>
+
+<main id="top"> 
+  <section id="landing" class="portfolio-landing" aria-label="Landing page introduction">
+    <div class="portfolio-landing__hero">
+      <h1 class="portfolio-landing__title">
+        <span class="portfolio-landing__title-line">Engineer Design Portfolio</span>
+      </h1>
+      <p class="portfolio-landing__leadline">
+        Hello, my name is Declan Chan, and I am a first-year engineering student at the University of Toronto. This portfolio expresses my written perspective on Engineering Design through the Praxis I and II design projects, and CIV102 bridge project.
+      </p>
+      <div class="portfolio-landing__actions">
+        <a class="portfolio-landing__enter" href="#position">Enter Portfolio</a>
+      </div>
+    </div>
+
+    <div class="portfolio-landing__marquee" aria-hidden="true">
+      <div class="portfolio-landing__track">
+        <span>Root Cause Analysis</span><span>Classical Brainstorm</span><span>Measurement Matrix</span><span>Proxy Test</span><span>Prototype</span><span>Perry Model</span><span>asdfasdfasdf</span><span>Verification</span><span>CAD</span>
+        <span>Root Cause Analysis</span><span>Classical Brainstorm</span><span>Measurement Matrix</span><span>Proxy Test</span><span>Prototype</span><span>Perry Model</span><span>asdfasdfasdf</span><span>Verification</span><span>CAD</span>
+      </div>
+    </div>
+  </section>
+
+<section id="position" class="section-shell">
+    <div class="section-intro">
+      <h2>Position Statement</h2>
+    </div>
+
+    <article class="card card-emphasis position-statement">
+      <p>
+        "Engineering design pertains to the methodical and iterative progression of ideation, fabrication, and evaluation of a product to satisfy predetermined criteria" as per Arena Solutions [1]. If we deconstruct the concept, I believe that "engineering" mirrors the rigorous iterative process with extensive verification and testing to improve possible solutions. Then, "design" refers to a set of goals and constraints, like parameters that define a <code>function()</code> to return an output and address an opportunity successfully. Personally, I want to continue engaging in this kind of work, since there are countless aspects in society that I believe could be improved to optimize our health and well-being: engineering design is thus one way for me to contribute to the world.
+      </p>
+      <p>
+        Although my position on this topic continues to evolve, currently, I have solidified what the process looks like to me in Fig 1. Stemming from my programming experience from ESC180 and ESC190, I created a metaphoric diagram that represents my approach using the Python programming language. This is because engineering design is similar to computers that take a systematic, but extensive and resilient approach to running tasks to produce a final output.
+      </p>
+      <p>
+        In my opinion, engineering design resembles a <code>while</code> loop: design iterations are continually executed and repeated so long as the goals are not satisfied <code>or</code> the evaluation compared to other designs deems the solution insufficient. Through my written perspective on the three prior design projects, they embody the reflection displayed in Fig 1, showing a repeated cycle of prototyping bridges, testing, evaluating, and refining until requirements are met where <code>goals_satisfied() == True</code>, and based on the evaluation criteria <code>design_judgment() == "sufficient"</code> to choose the best design.
+      </p>
+      <p>
+        Simultaneously, considering how most engineering projects are executed as a team, I find it vital to embrace four key values to remain on the same page and to produce the optimal final product. Noticeably, these values are similar to constant variables that remain immutable during a program's execution and support a function when called, as displayed in black in Fig 1.
+      </p>
+      <figure class="hero-figure card">
+        <img src="assets/position-statement/Engineering Design Flow Chart.jpg" alt="Engineering design flow chart based on a Python-inspired iterative process.">
+        <figcaption>
+            Fig 1. My approach to engineering design written in Python.
+        </figcaption>
+      </figure>
+      <ul class="values-list">
+        <li><code>"communication"</code>: Ensures a team is on the same page to avoid inconsistencies and unintended repetition of ideas.</li>
+        <li><code>"collaboration"</code>: Integrates diverse perspectives from other sources and team members to further improve solutions or generate new ideas.</li>
+        <li><code>"accountability"</code>: Reinforces responsibility in accomplishing the engineering design process, which could be essential in improving lives and society.</li>
+        <li><code>"resilience"</code>: Sustains progress despite setbacks, to learn from failures and avoid repeating the same mistakes.</li>
+      </ul>
+      <p>
+        To sum Fig 1, my approach to engineering design is to begin with an <code>input()</code> to identify the opportunity. Subsequently, we shall frame the problem with constraints, similar to defining function arguments so that a program does not run aimlessly. After undergoing an extensive design iteration loop, we can ultimately output a final design and present it to stakeholders. However, each <code>function()</code> or step in engineering design depends on the <code>constants = ["communication", "collaboration", "accountability", "resilience"]</code> to execute effectively. Similar to Python, all aspects in engineering design must be well-defined and well-structured, and only through many iterations can a team produce the best results.
+      </p>
+      <p>
+        Within the <code>while</code>-loop structure, I found that engineering design processes including <code>diverge()</code>, <code>converge()</code>, <code>refine()</code>, etc. are all necessary to optimize the ultimate outcome. Accordingly, I present the specifics in my portfolio design projects through the use of CTMFs. Nonetheless, my Python-inspired model of engineering design is one that represents resilience in the iterative process. Based on my experiences so far, engineering design is not a simple checklist of tasks, but a proactive loop of countless prototypes, tests, and improvements in order to address an opportunity.
+      </p>
+    </article>
+  </section>
+
+  <section id="praxis-1" class="section-shell">
+    <div class="section-intro">
+      <h2>Praxis I</h2>
+    </div>
+
+    <div class="project-layout">
+      <article class="card summary-card">
+        <div class="card-label">Summary + Annotation</div>
+        <div class="ctmf-inline-gallery">
+          <div class="inline-figure-slider" data-inline-slider>
+            <button class="inline-figure-slider__button inline-figure-slider__button--prev" type="button" aria-label="Show previous Praxis I figure">&#10094;</button>
+            <div class="inline-figure-slider__viewport">
+              <figure class="ctmf-inline-gallery__item inline-figure-slider__slide">
+                <img src="assets/praxis-i/vacuum1.png" alt="First vacuum design image.">
+                <figcaption>Fig 2. 3D-printed vacuum prototype.</figcaption>
+              </figure>
+              <figure class="ctmf-inline-gallery__item inline-figure-slider__slide">
+                <img src="assets/praxis-i/vacuum2.png" alt="Second vacuum design image.">
+                <figcaption>Fig 3. Vacuum prototype with SCB.</figcaption>
+              </figure>
+            </div>
+            <button class="inline-figure-slider__button inline-figure-slider__button--next" type="button" aria-label="Show next Praxis I figure">&#10095;</button>
+          </div>
+        </div>
+        <p>
+          In Praxis I, my team finalized a design report about our best design in response to an opportunity to remove liquid before recycling disposable cups, at the University of Toronto St. George (UTSG) Campus. The <code>constants</code> defined in my position statement were especially important to ensure team cohesion as well as developing the most optimal design as possible. Correspondingly, as displayed in Fig 2 and 3, we recommended a Vacuum Cleaning Device, a user-operated machine using air pressure to clean disposable cups, preventing liquid contamination in the trash. Other designs were also prototyped in aid for our convergence and aiming to prevent the issue of recycling contamination, as small amounts of liquid residue cannot be handled by recycling plants. The project emphasized understanding stakeholder needs, defining constraints, and iteratively developing solutions. Through activities
+          such as brainstorming, prototyping, and reflection, I began to operationalize my design philosophy as an <code>while</code>-loop.
+        </p>
+        <p>(Thanks to my Praxis I Team: Muhammed, Shawn and Terry)</p>
+      </article>
+
+      <div class="ctmf-stack">
+        <article class="card ctmf-card frame-tone">
+          <div class="ctmf-meta">
+            <span class="strand">Frame</span>
+            <span class="tool-name">Root Cause Analysis</span>
+          </div>
+          <p><strong>Definition: </strong>The identification of the underlying source of a problem rather than only addressing its visible symptoms.</p>
+          <p><strong>Application: </strong></p>
+          <p><strong>Future Implications: </strong></p>
+        </article>
+
+        <article class="card ctmf-card diverge-tone">
+          <div class="ctmf-meta">
+            <span class="strand">Diverge</span>
+            <span class="tool-name">Classical Brainstorm</span>
+          </div>
+          <div class="ctmf-inline-gallery">
+            <figure class="ctmf-inline-gallery__item">
+              <img src="assets/praxis-i/classical_brainstorm.jpg" alt="Comparison of two Alpha Release brainstorming strategies.">
+              <figcaption>Fig 4. Comparison of two Alpha Release brainstorming strategies, contrasting a stricter tool-driven approach with the later random-idea sketching process.</figcaption>
+            </figure>
+          </div>
+          <p><strong>Definition: </strong>A diverging method used to generate many possible ideas before judging or narrowing them.</p>
+          <p><strong>Application: </strong>We used early brainstorming tools such as SCAMPER and Morph Charts, then shifted to freer sketching and random prompts when those methods became too restrictive and slowed idea generation.</p>
+          <p><strong>Future Implications: </strong>This experience suggests that future projects should treat brainstorming tools flexibly and prioritize idea quantity and openness when a team feels stuck too early in divergence.</p>
+        </article>
+
+        <article class="card ctmf-card converge-tone">
+          <div class="ctmf-meta">
+            <span class="strand">Converge</span>
+            <span class="tool-name">Measurement Matrix</span>
+          </div>
+          <p><strong>Definition: </strong>A structured comparison tool that evaluates design alternatives against selected criteria to support decision-making.</p>
+          <p><strong>Application: </strong>The formation of the measurement matrix was a rigorous process. For each prototype, there were respective proxy tests to quantify how well they surpass the evaluation criteria. All in all, the measurement matrix aided our final convergence to justify that a Vacuum Cleaning Device is the best design within the constraints of the opportunity.</p>
+          <figure class="ctmf-inline-gallery__item">
+            <img src="assets/praxis-i/measurement_matrix.png" alt="Measurement matrix comparing Praxis I design alternatives.">
+            <figcaption>Fig 5. Measurement matrix used in Praxis I to compare design alternatives against shared evaluation criteria before converging on the final concept.</figcaption>
+          </figure>
+          <p><strong>Future Implications: </strong>Going forward, measurement matrix can continue supporting convergence by making trade-offs visible through a table that quantifies why one option best satisfies the opportunity and its constraints. Nevertheless, there were many biases during the process that may have influenced the final convergence. For instance, the weighting of the measurement matrix was based on a pairwise comparison in which our team created through an discussion to determine whether one option would perform better for stakeholders and why. The issue is that we are not scientists or environmentalists so it would of been more beneficial to form a basis with the evaluation criteria around CRAAP tested research sources rather than personal biases.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="bridge" class="section-shell">
+    <div class="section-intro">
+      <h2>CIV102 Bridge Project</h2>
+    </div>
+
+    <div class="project-layout">
+      <article class="card summary-card">
+        <div class="card-label">Summary + Annotation</div>
+        <p>
+          The CIV102 bridge project involved designing, modeling, and constructing a matboard beam bridge capable of sustaining high loads. The process including many iterations of computational analysis using Python, and physical prototyping.
+        </p>
+        <p>
+          Key improvements included increasing cross-sectional height, adding diaphragms to prevent buckling, and reinforcing splice connections. The final design balanced structural optimization through a high second moment of area with constructability constraints, ultimately achieving a predicted failure load of approximately 954 N after accounting for real-world imperfections.
+        </p>
+        <p>
+          The failure of the prototype at the splice revealed a critical insight: local weaknesses dominate global design performance. This directly influenced the addition of wider splice wraps and an X-support system, demonstrating how failure informed iteration.
+        </p>
+        <p>
+          From my position statement, this project strongly embodies the <code>while</code> loop of my position statement on engineering design, where repeated testing and refinement led to a significantly improved final solution. Namely, building the CIV102 bridge with my team was like a <code>while</code> we iterated through several simulations through Python code, and we constructed two matboard bridges undergoing extensive testing and evaluation. Correspondingly, I found that this process is analogous to debugging code as per my position statement, which makes Python a comparable metaphor to engineering design. When our best-performing bridge eventually fulfilled the design's requirements, we exited the <code>while</code> loop, outputting a product winning second place out of 75 teams.
+        </p>
+        <p>(Thanks to my CIV102 Team: Junye, Terry and Navneet)</p>
+      </article>
+
+            <div class="ctmf-stack">
+        <article class="card ctmf-card converge-tone">
+          <div class="ctmf-meta">
+            <span class="strand">Converge</span>
+            <span class="tool-name">Proxy Test</span>
+          </div>
+          <div class="ctmf-inline-gallery">
+            <figure class="ctmf-inline-gallery__item">
+              <img src="assets/civ102-bridge/prototype_fail.jpg" alt="Prototype bridge failure photograph showing the failed section.">
+              <figcaption>Fig 6. Photograph of the failed prototype at the splice, revealing how a local connection weakness can control overall bridge performance.</figcaption>
+            </figure>
+          </div>
+          <p><strong>Definition: </strong>A simplification of rigorous testing to assess alternative solutions' viability and feasibility through the retrieved data, without requiring access to advanced machinery.</p>
+          <p><strong>Application: </strong>To optimize our matboard prototypes, we tested each one under real-world conditions to determine whether it failed or satisfied the basic requirements we had quantified. The proxy test exposed weaknesses at the splice and helped us identify where local failure controlled overall bridge behavior.</p>
+          <p><strong>Future Implications: </strong>In future structural projects, proxy testing should be used earlier to reveal weak points before final fabrication so that design time is spent improving the most critical connections and load paths.</p>
+        </article>
+
+        <article class="card ctmf-card represent-tone">
+          <div class="ctmf-meta">
+            <span class="strand">Represent</span>
+            <span class="tool-name">Prototype</span>
+          </div>
+          <div class="ctmf-inline-gallery">
+            <figure class="ctmf-inline-gallery__item">
+              <img src="assets/civ102-bridge/2ndprototype_tracing.jpg" alt="Second bridge prototype tracing image used during design iteration.">
+              <figcaption>Fig 7. Reinforcing the failed part of the first bridge began a new iteration of the <code>while</code> loop before tracing the second prototype.</figcaption>
+            </figure>
+            <figure class="ctmf-inline-gallery__item">
+              <img src="assets/civ102-bridge/glueing_bridge_2ndprototype.jpg" alt="Glueing the second bridge prototype during fabrication.">
+              <figcaption>Fig 8. Glueing the second bridge prototype during fabrication as the revised design moved from tracing into assembly.</figcaption>
+            </figure>
+          </div>
+          <p><strong>Definition: </strong>A representation to generate and communicate information about the functionality of a design and aid the process of assessing alternatives. A representation to generate and communicate information about the functionality of a design and aid the process of assessing alternatives.</p>
+          <p><strong>Application: </strong></p>
+          <p><strong>Future Implications: </strong>Going forward, </p>
+        </article>
+
+        <article class="card ctmf-card fdcr-tone">
+          <div class="ctmf-meta">
+            <span class="strand"><span class="fdcr-word" aria-label="FDCR"><span class="fdcr-letter fdcr-letter--f">F</span><span class="fdcr-letter fdcr-letter--d">D</span><span class="fdcr-letter fdcr-letter--c">C</span><span class="fdcr-letter fdcr-letter--r">R</span></span></span>
+            <span class="tool-name">Perry Model</span>
+          </div>
+          <figure class="ctmf-inline-gallery__item">
+            <img src="assets/civ102-bridge/perry_model.png" alt="Perry model of intellectual and ethical development diagram.">
+            <figcaption>Fig 9. Perry model diagram from the first lecture of Praxis I [2].</figcaption>
+          </figure>
+          <div class="ctmf-inline-gallery">
+            <div class="inline-figure-slider" data-inline-slider>
+              <button class="inline-figure-slider__button inline-figure-slider__button--prev" type="button" aria-label="Show previous Perry Model figure">&#10094;</button>
+              <div class="inline-figure-slider__viewport">
+                <figure class="ctmf-inline-gallery__item inline-figure-slider__slide">
+                  <img src="assets/civ102-bridge/CAD_inside_beam.png" alt="CAD interior beam view of the bridge design.">
+                  <figcaption>Fig 10. CAD interior beam view with varying diaphragm spacing.</figcaption>
+                </figure>
+                <figure class="ctmf-inline-gallery__item inline-figure-slider__slide">
+                  <img src="assets/civ102-bridge/CAD_cross_section.png" alt="CAD cross-section view of the bridge design.">
+                  <figcaption>Fig 11. CAD cross-section view used to communicate the bridge geometry and support dimensional checks before fabrication.</figcaption>
+                </figure>
+              </div>
+              <button class="inline-figure-slider__button inline-figure-slider__button--next" type="button" aria-label="Show next Perry Model figure">&#10095;</button>
+            </div>
+          </div>
+          <p><strong>Definition: </strong>The Perry model of intellectual and ethical development encompasses four stages and respective transitions.</p>
+          <p><strong>Application: </strong>Three stages of the Perry model best fit our engineering design process. (1) Initially, we began the divering process in the dualism stage, where I thought that varying the rectangular cross-sectional area was the only correct way of going about improving the sturdiness of the physical bridge. (2) However, realizing that this did not let us create ideas as flexibly as we thought, with suboptimal safety factor distribution results in Python, my team and I shifted our intellectual development to multiplicity. Namely, we found out through secondary research and first-hand Python testing, that manipulating the spacing of diaphragms is also one way to improve the safety factors as shown in Fig 10. This then gave rise to further creative solutions including an X-shaped diaphragm, a curved shape bridge, and more. (3) With this, I reached a stage of relativism, altogether recognizing that there is not always one correct approach in an engineering design process. For instance, I witnessed some other groups with a trapezoidal cross-section, a hollow triangular base, and more, elucidating the importance of open-mindedness in engineering design projects.</p>
+          <p><strong>Future Implications: </strong>In future projects, this perspective encourages greater openness, stronger team morale, and more flexible decision-making because we are less likely to stay stuck on one rigid method when another approach may be more effective.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="robot-arm" class="section-shell">
+    <div class="section-intro">
+      <h2>Robotic Arm Design</h2>
+    </div>
+
+    <div class="project-layout">
+      <article class="card summary-card">
+        <div class="card-label">Summary + Annotation</div>
+        <p>I am a Design Engineer in the University of Toronto's Robotics for Space Exploration (RSX) arm subteam aiming to create a flexibly mechanical and capable of lifting heavy weight robotic arm. There continues to be yearly and ongoing iterations to improve the robotic arm mechanics embodying my position on the <code>while</code>-loop, where the team also reinforces my four <code>constants = ["communication", "collaboration", "accountability", "resilience"]</code> especially important for a large design team like RSX requiring coordination of many members and subteams.</p>
+        <p>(Thanks to the Robotics for Space Exploration (RSX) team)</p>
+      </article>
+
+            <div class="ctmf-stack">
+        <article class="card ctmf-card frame-tone">
+          <div class="ctmf-meta">
+            <span class="strand">Frame</span>
+            <span class="tool-name">PIAA???</span>
+          </div>
+          <p><strong>Definition: </strong></p>
+          <p><strong>Application: </strong>The CanSat Competition requirements frame the basis of the design project before entering the <code>while</code>-loop of iterations. Subsequently, <code>while goals_satisfied() == False</code>, those requirements continue to guide each new iteration and verification step.</p>
+          <p><strong>Future Implications: </strong></p>
+        </article>
+
+        <article class="card ctmf-card converge-tone">
+          <div class="ctmf-meta">
+            <span class="strand">Converge</span>
+            <span class="tool-name">Verification</span>
+          </div>
+          <figure class="ctmf-inline-gallery__item">
+            <img src="assets/robotic-arm-design/arm_claw.jpg" alt="Reference claw design for the robotic arm.">
+            <figcaption>Fig 12. Reference design for the robotic arm claw used to guide verification of geometry, gripping approach, and assembly feasibility.</figcaption>
+          </figure>
+          <p><strong>Definition: </strong>A process of checking whether a design satisfies the intended specifications, dimensions, and performance requirements.</p>
+          <p><strong>Application: </strong>asdf</p>
+          <p><strong>Future Implications: </strong></p>
+        </article>
+
+        <article class="card ctmf-card represent-tone">
+          <div class="ctmf-meta">
+            <span class="strand">Represent</span>
+            <span class="tool-name">CAD</span>
+          </div>
+          <div class="ctmf-inline-gallery">
+            <div class="inline-figure-slider" data-inline-slider>
+              <button class="inline-figure-slider__button inline-figure-slider__button--prev" type="button" aria-label="Show previous CAD figure">&#10094;</button>
+              <div class="inline-figure-slider__viewport">
+                <figure class="ctmf-inline-gallery__item inline-figure-slider__slide">
+                  <img src="assets/robotic-arm-design/gear_box.jpg" alt="Gearbox CAD image for the robotic arm design.">
+                  <figcaption>Fig 13. Gearbox CAD view used to communicate the internal drive arrangement of the robotic arm design.</figcaption>
+                </figure>
+                <figure class="ctmf-inline-gallery__item inline-figure-slider__slide">
+                  <img src="assets/robotic-arm-design/metalsheet_assembly.png" alt="Metal sheet assembly CAD view.">
+                  <figcaption>Fig 14. Metal sheet assembly CAD view showing how the robotic arm structure is organized before fabrication.</figcaption>
+                </figure>
+              </div>
+              <button class="inline-figure-slider__button inline-figure-slider__button--next" type="button" aria-label="Show next CAD figure">&#10095;</button>
+            </div>
+          </div>
+          <p><strong>Definition: </strong>Computer-aided design used to model, communicate, and refine parts before fabrication.</p>
+          <p><strong>Application: </strong>asdf</p>
+          <p><strong>Future Implications: </strong></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="ctmf-index" class="section-shell">
+    <div class="section-intro">
+      <h2>CTMF Bank</h2>
+      <p>
+        This section consolidates the nine CTMFs used across Praxis I, the CIV102 bridge project, and Robotic Arm Design.
+      </p>
+    </div>
+
+    <div class="card ctmf-bank-card">
+      <table class="ctmf-table">
+        <thead>
+          <tr>
+            <th>CTMF</th>
+            <th>Strand</th>
+            <th>Design Project</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Root Cause Analysis</td>
+            <td class="strand-frame">Frame</td>
+            <td>Praxis I</td>
+          </tr>
+          <tr>
+            <td>Classical Brainstorm</td>
+            <td class="strand-diverge">Diverge</td>
+            <td>Praxis I</td>
+          </tr>
+          <tr>
+            <td>Measurement Matrix</td>
+            <td class="strand-converge">Converge</td>
+            <td>Praxis I</td>
+          </tr>
+          <tr>
+            <td>Proxy Test</td>
+            <td class="strand-converge">Converge</td>
+            <td>CIV102 Bridge</td>
+          </tr>
+          <tr>
+            <td>Prototype</td>
+            <td class="strand-represent">Represent</td>
+            <td>CIV102 Bridge</td>
+          </tr>
+          <tr>
+            <td>Perry Model</td>
+            <td class="strand-fdcr"><span class="fdcr-word" aria-label="FDCR"><span class="fdcr-letter fdcr-letter--f">F</span><span class="fdcr-letter fdcr-letter--d">D</span><span class="fdcr-letter fdcr-letter--c">C</span><span class="fdcr-letter fdcr-letter--r">R</span></span></td>
+            <td>CIV102 Bridge</td>
+          </tr>
+          <tr>
+            <td>PIAA</td>
+            <td class="strand-diverge">Frame</td>
+            <td>Robotic Arm Design</td>
+          </tr>
+          <tr>
+            <td>Verification</td>
+            <td class="strand-converge">Converge</td>
+            <td>Robotic Arm Design</td>
+          </tr>
+          <tr>
+            <td>CAD</td>
+            <td class="strand-represent">Represent</td>
+            <td>Robotic Arm Design</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="references" class="section-shell">
+    <div class="section-intro">
+      <h2>References</h2>
+    </div>
+
+    <div class="card">
+      <ol class="reference-list">
+        <li>Arena Solutions. "What Is Engineering Design?"</li>
+        <li>Praxis I Lecture Slides. Perry model of intellectual and ethical development</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<canvas class="water-interaction" aria-hidden="true"></canvas>
+
+<div class="scroll-buddy" aria-hidden="true">
+  <div class="scroll-buddy__glow"></div>
+  <svg class="scroll-buddy__svg" viewBox="0 0 120 160" role="presentation">
+    <g class="buddy-shadow">
+      <ellipse cx="60" cy="146" rx="24" ry="7"></ellipse>
+    </g>
+    <g class="buddy-energy buddy-energy--left">
+      <path d="M33 108 C18 96, 14 78, 20 58"></path>
+      <path d="M27 116 C11 105, 6 88, 12 66"></path>
+    </g>
+    <g class="buddy-energy buddy-energy--right">
+      <path d="M87 108 C102 96, 106 78, 100 58"></path>
+      <path d="M93 116 C109 105, 114 88, 108 66"></path>
+    </g>
+    <g class="buddy-particles buddy-particles--left">
+      <circle cx="28" cy="99" r="2.5"></circle>
+      <circle cx="20" cy="87" r="1.8"></circle>
+      <circle cx="32" cy="76" r="1.9"></circle>
+      <circle cx="18" cy="69" r="1.5"></circle>
+    </g>
+    <g class="buddy-particles buddy-particles--right">
+      <circle cx="92" cy="99" r="2.5"></circle>
+      <circle cx="100" cy="87" r="1.8"></circle>
+      <circle cx="88" cy="76" r="1.9"></circle>
+      <circle cx="102" cy="69" r="1.5"></circle>
+    </g>
+    <g class="buddy-body">
+      <circle class="buddy-head" cx="60" cy="32" r="18"></circle>
+      <g class="buddy-helmet" aria-hidden="true">
+        <path class="buddy-helmet__shell" d="M43 27 C44 16, 51 9, 60 9 C69 9, 76 16, 77 27 C71 25.4, 65.5 24.7, 60 24.7 C54.5 24.7, 49 25.4, 43 27 Z"></path>
+        <path class="buddy-helmet__shadow" d="M45 24.5 C49.5 21.8, 54.5 20.9, 60 20.9 C65.5 20.9, 70.5 21.8, 75 24.5 C70.1 23.5, 65.1 23, 60 23 C54.9 23, 49.9 23.5, 45 24.5 Z"></path>
+        <path class="buddy-helmet__highlight" d="M49 16.5 C52.5 12.9, 56.7 11.2, 61.4 11.4 C57.3 12.6, 54.1 15.1, 51.8 19.1"></path>
+        <path class="buddy-helmet__brim" d="M40.5 27.6 C47.5 25.2, 53.9 24.2, 60 24.2 C66.1 24.2, 72.5 25.2, 79.5 27.6 C74 30.5, 67.5 31.7, 60 31.7 C52.5 31.7, 46 30.5, 40.5 27.6 Z"></path>
+        <path class="buddy-helmet__brim-edge" d="M43.5 28.1 Q60 34.1 76.5 28.1"></path>
+        <line class="buddy-helmet__ridge" x1="60" y1="11.5" x2="60" y2="24.6"></line>
+      </g>
+      <g class="buddy-eyes">
+        <circle class="buddy-eye buddy-eye--left" cx="54" cy="30" r="2.5"></circle>
+        <circle class="buddy-eye buddy-eye--right" cx="66" cy="30" r="2.5"></circle>
+      </g>
+      <path class="buddy-mouth buddy-mouth--smile" d="M54 39 Q60 42 66 39"></path>
+      <ellipse class="buddy-mouth buddy-mouth--o" cx="60" cy="39.5" rx="3.3" ry="4.4"></ellipse>
+      <line class="buddy-torso" x1="60" y1="50" x2="60" y2="102"></line>
+      <g class="buddy-arm buddy-arm--left">
+        <line x1="60" y1="64" x2="35" y2="84"></line>
+      </g>
+      <g class="buddy-arm buddy-arm--right">
+        <line x1="60" y1="64" x2="85" y2="84"></line>
+      </g>
+      <line class="buddy-leg" x1="60" y1="102" x2="42" y2="134"></line>
+      <line class="buddy-leg" x1="60" y1="102" x2="78" y2="134"></line>
+    </g>
+  </svg>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
