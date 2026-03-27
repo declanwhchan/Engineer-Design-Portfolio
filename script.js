@@ -772,3 +772,76 @@ function initializeWaterInteraction() {
   resizeCanvas();
   tick();
 }
+
+function setCTMFCardExpanded(card, shouldExpand) {
+  if (!card) {
+    return;
+  }
+
+  const toggleButton = card.querySelector('.ctmf-toggle');
+  card.classList.toggle('is-expanded', shouldExpand);
+
+  if (!toggleButton) {
+    return;
+  }
+
+  toggleButton.setAttribute('aria-expanded', String(shouldExpand));
+
+  const arrow = toggleButton.querySelector('.ctmf-toggle__arrow');
+  const label = toggleButton.querySelector('.ctmf-toggle__label');
+
+  if (arrow) {
+    arrow.innerHTML = shouldExpand ? '&uarr;' : '&darr;';
+  }
+
+  if (label) {
+    label.textContent = shouldExpand ? 'Show Less' : 'Read More';
+  }
+}
+
+function openCTMFCardById(cardId) {
+  const targetCard = document.getElementById(cardId);
+  if (!targetCard) {
+    return;
+  }
+
+  const cardStack = targetCard.closest('.ctmf-stack');
+  cardStack?.querySelectorAll('.ctmf-card.is-expanded').forEach((card) => {
+    if (card !== targetCard) {
+      setCTMFCardExpanded(card, false);
+    }
+  });
+
+  setCTMFCardExpanded(targetCard, true);
+
+  const parentSection = targetCard.closest('.section-shell');
+  if (parentSection?.id) {
+    const sectionIndex = getSectionIndexById(parentSection.id);
+    if (sectionIndex >= 0) {
+      holdWheelAtIndex(sectionIndex);
+    }
+  }
+
+  window.requestAnimationFrame(() => {
+    targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+}
+
+const ctmfNavLinks = [...document.querySelectorAll('[data-ctmf-link]')];
+
+ctmfNavLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const targetId = link.dataset.ctmfTarget;
+    if (!targetId) {
+      return;
+    }
+
+    event.preventDefault();
+    openCTMFCardById(targetId);
+
+    if (siteNav && siteNav.classList.contains('open')) {
+      siteNav.classList.remove('open');
+      menuToggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
