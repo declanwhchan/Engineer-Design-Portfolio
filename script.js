@@ -839,6 +839,14 @@ ctmfNavLinks.forEach((link) => {
     event.preventDefault();
     openCTMFCardById(targetId);
 
+    const navItem = link.closest('.site-nav__item--has-menu');
+    const parentSectionHref = navItem?.querySelector('.site-nav__link')?.getAttribute('href');
+    if (parentSectionHref && parentSectionHref.startsWith('#')) {
+      window.requestAnimationFrame(() => {
+        history.replaceState(null, '', parentSectionHref);
+      });
+    }
+
     if (siteNav && siteNav.classList.contains('open')) {
       siteNav.classList.remove('open');
       menuToggle?.setAttribute('aria-expanded', 'false');
