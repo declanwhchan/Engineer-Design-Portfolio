@@ -516,22 +516,111 @@ function initializeInlineFigureSliders() {
     const slides = [...slider.querySelectorAll(".inline-figure-slider__slide")];
     const prevButton = slider.querySelector(".inline-figure-slider__button--prev");
     const nextButton = slider.querySelector(".inline-figure-slider__button--next");
+    let dots = [...slider.querySelectorAll(".inline-figure-slider__dot")];
+
+    function syncCaptionHeights() {
+      const viewport = slider.querySelector(".inline-figure-slider__viewport");
+      const viewportWidth = viewport?.clientWidth || slider.clientWidth || 0;
+      let tallestCaption = 0;
+
+      slides.forEach((slide) => {
+        const caption = slide.querySelector("figcaption");
+        if (!caption) {
+          return;
+        }
+
+        const previousDisplay = slide.style.display;
+        const previousPosition = slide.style.position;
+        const previousVisibility = slide.style.visibility;
+        const previousPointerEvents = slide.style.pointerEvents;
+        const previousWidth = slide.style.width;
+        const previousMaxWidth = slide.style.maxWidth;
+        const previousMinWidth = slide.style.minWidth;
+
+        slide.style.display = "grid";
+        slide.style.position = "absolute";
+        slide.style.visibility = "hidden";
+        slide.style.pointerEvents = "none";
+
+        if (viewportWidth) {
+          slide.style.width = `${viewportWidth}px`;
+          slide.style.maxWidth = `${viewportWidth}px`;
+          slide.style.minWidth = `${viewportWidth}px`;
+        }
+
+        caption.style.minHeight = "0";
+        caption.style.height = "auto";
+        tallestCaption = Math.max(tallestCaption, Math.ceil(caption.getBoundingClientRect().height));
+
+        slide.style.display = previousDisplay;
+        slide.style.position = previousPosition;
+        slide.style.visibility = previousVisibility;
+        slide.style.pointerEvents = previousPointerEvents;
+        slide.style.width = previousWidth;
+        slide.style.maxWidth = previousMaxWidth;
+        slide.style.minWidth = previousMinWidth;
+      });
+
+      slides.forEach((slide) => {
+        const caption = slide.querySelector("figcaption");
+        if (caption) {
+          const captionHeight = tallestCaption ? `${tallestCaption}px` : "";
+          caption.style.minHeight = captionHeight;
+          caption.style.height = captionHeight;
+        }
+      });
+    }
 
     if (slides.length < 2) {
       prevButton?.setAttribute("hidden", "hidden");
       nextButton?.setAttribute("hidden", "hidden");
       slides[0]?.classList.add("is-active");
+      syncCaptionHeights();
+      window.addEventListener("resize", syncCaptionHeights);
+      window.addEventListener("load", syncCaptionHeights, { once: true });
       return;
     }
 
     let currentIndex = 0;
 
+    if (!dots.length) {
+      const dotsWrapper = document.createElement("div");
+      dotsWrapper.className = "inline-figure-slider__dots";
+      dotsWrapper.setAttribute("aria-label", "Figure slider position");
+
+      slides.forEach((slide, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "inline-figure-slider__dot";
+        dot.setAttribute("aria-label", "Show figure " + (index + 1));
+        dot.addEventListener("click", () => {
+          currentIndex = index;
+          updateSlides();
+        });
+        dotsWrapper.appendChild(dot);
+      });
+
+      slider.appendChild(dotsWrapper);
+      dots = [...dotsWrapper.querySelectorAll(".inline-figure-slider__dot")];
+    }
+
     function updateSlides() {
       slides.forEach((slide, index) => {
-        slide.classList.toggle("is-active", index === currentIndex);
-        slide.setAttribute("aria-hidden", index === currentIndex ? "false" : "true");
+        const isActive = index === currentIndex;
+        slide.classList.toggle("is-active", isActive);
+        slide.setAttribute("aria-hidden", isActive ? "false" : "true");
+      });
+
+      dots.forEach((dot, index) => {
+        const isActive = index === currentIndex;
+        dot.classList.toggle("is-active", isActive);
+        dot.setAttribute("aria-current", isActive ? "true" : "false");
       });
     }
+
+    syncCaptionHeights();
+    window.addEventListener("resize", syncCaptionHeights);
+    window.addEventListener("load", syncCaptionHeights, { once: true });
 
     prevButton?.addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + slides.length) % slides.length;
@@ -853,3 +942,6 @@ ctmfNavLinks.forEach((link) => {
     }
   });
 });
+
+
+
