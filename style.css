@@ -5854,3 +5854,650 @@ code {
   min-height: 0 !important;
   height: auto !important;
 }
+
+.ctmf-card > .ctmf-inline-gallery__item:has(img[src$="requirements.png"]) {
+  float: right !important;
+  width: fit-content !important;
+  max-width: min(48%, 26rem) !important;
+  margin: 0.2rem 0 1rem 1.4rem !important;
+  justify-self: auto !important;
+  display: grid !important;
+}
+
+.ctmf-card > .ctmf-inline-gallery__item:has(img[src$="requirements.png"]) img {
+  display: block !important;
+  width: auto !important;
+  max-width: min(26rem, 100%) !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: 390px !important;
+  object-fit: contain !important;
+}
+
+.ctmf-card > .ctmf-inline-gallery__item:has(img[src$="requirements.png"]) figcaption {
+  width: 0 !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 900px) {
+  .ctmf-card > .ctmf-inline-gallery__item:has(img[src$="requirements.png"]) {
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0 0 !important;
+  }
+
+  .ctmf-card > .ctmf-inline-gallery__item:has(img[src$="requirements.png"]) img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+.ctmf-card > .ctmf-inline-gallery__item:has(img[src$="requirements.png"]) {
+  max-width: min(54%, 30rem) !important;
+}
+
+.ctmf-card > .ctmf-inline-gallery__item:has(img[src$="requirements.png"]) img {
+  max-width: min(30rem, 100%) !important;
+  max-height: 420px !important;
+}
+
+/* Praxis II one-pager: wide wrapped PDF that behaves like a static figure */
+#praxis-2 .summary-card > .ctmf-inline-gallery__item:has(iframe[src*="One-Pager.pdf"]) {
+  float: right !important;
+  width: 56% !important;
+  max-width: 56% !important;
+  margin: 0.1rem 0 1rem 1.5rem !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  overflow: hidden !important;
+  background: rgba(10, 18, 34, 0.72) !important;
+}
+
+#praxis-2 .summary-card > .ctmf-inline-gallery__item:has(iframe[src*="One-Pager.pdf"]) iframe {
+  display: block !important;
+  width: 100% !important;
+  height: 40rem !important;
+  border: 0 !important;
+  background: rgba(10, 18, 34, 0.72) !important;
+  pointer-events: none !important;
+}
+
+#praxis-2 .summary-card > .ctmf-inline-gallery__item:has(iframe[src*="One-Pager.pdf"]) figcaption {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+}
+
+#praxis-2 .summary-card > p {
+  clear: none !important;
+}
+
+@media (max-width: 900px) {
+  #praxis-2 .summary-card > .ctmf-inline-gallery__item:has(iframe[src*="One-Pager.pdf"]) {
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0 0 !important;
+  }
+
+  #praxis-2 .summary-card > .ctmf-inline-gallery__item:has(iframe[src*="One-Pager.pdf"]) iframe {
+    height: 30rem !important;
+  }
+}
+
+/* Praxis II one-pager: two-page slider using rendered PDF page images */
+#praxis-2 .summary-card > .inline-figure-slider:has(img[src$="one-pager-page-1.png"]) {
+  float: right !important;
+  width: min(62%, 42rem) !important;
+  max-width: min(62%, 42rem) !important;
+  margin: 0.15rem 0 1rem 1.6rem !important;
+  clear: none !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider:has(img[src$="one-pager-page-1.png"]) .inline-figure-slider__viewport,
+#praxis-2 .summary-card > .inline-figure-slider:has(img[src$="one-pager-page-1.png"]) .inline-figure-slider__slide {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider:has(img[src$="one-pager-page-1.png"]) .inline-figure-slider__slide {
+  background: rgba(10, 18, 34, 0.72) !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider:has(img[src$="one-pager-page-1.png"]) .inline-figure-slider__slide img {
+  display: block !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: 34rem !important;
+  min-height: 34rem !important;
+  max-height: 34rem !important;
+  object-fit: contain !important;
+  background: rgba(10, 18, 34, 0.72) !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider:has(img[src$="one-pager-page-1.png"]) .inline-figure-slider__slide figcaption {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+#praxis-2 .summary-card > p {
+  clear: none !important;
+}
+
+@media (max-width: 900px) {
+  #praxis-2 .summary-card > .inline-figure-slider:has(img[src$="one-pager-page-1.png"]) {
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0 0 !important;
+  }
+
+  #praxis-2 .summary-card > .inline-figure-slider:has(img[src$="one-pager-page-1.png"]) .inline-figure-slider__slide img {
+    height: 24rem !important;
+    min-height: 24rem !important;
+    max-height: 24rem !important;
+  }
+}
+
+/* Praxis II one-pager slider: full-width figure, one full page per slide */
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary {
+  float: none !important;
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin: 1rem 0 1.15rem !important;
+  clear: both !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__viewport,
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__slide {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__slide {
+  background: rgba(10, 18, 34, 0.72) !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__slide img {
+  display: block !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  object-fit: fill !important;
+  background: rgba(10, 18, 34, 0.72) !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__slide figcaption {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+#praxis-2 .summary-card > p {
+  clear: none !important;
+}
+
+/* Praxis II one-pager slider: use the PDF directly, one page per full-width slide */
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary {
+  float: none !important;
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin: 1rem 0 1.15rem !important;
+  clear: both !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__viewport,
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__slide {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .summary-pdf-frame {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 8.5 / 11 !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .summary-pdf-frame iframe {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  background: #ffffff !important;
+  pointer-events: none !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__slide figcaption {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Praxis II one-pager slider: use onepager1 and onepager2 as full-width figures */
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary {
+  float: none !important;
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin: 1rem 0 1.15rem !important;
+  clear: both !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__viewport,
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__slide {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__slide {
+  background: rgba(10, 18, 34, 0.72) !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__slide img {
+  display: block !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  background: rgba(10, 18, 34, 0.72) !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__slide figcaption {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Praxis II one-pager slider: narrower wrapped layout beside summary text */
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary {
+  float: right !important;
+  display: block !important;
+  width: min(48%, 32rem) !important;
+  min-width: 0 !important;
+  max-width: min(48%, 32rem) !important;
+  margin: 0.15rem 0 1rem 1.5rem !important;
+  clear: none !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__viewport,
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__slide {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary .inline-figure-slider__slide img {
+  display: block !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+#praxis-2 .summary-card > p {
+  clear: none !important;
+}
+
+@media (max-width: 900px) {
+  #praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary {
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0 1.15rem !important;
+  }
+}
+
+/* Praxis II one-pager slider: slightly wider wrapped layout */
+#praxis-2 .summary-card > .inline-figure-slider.inline-figure-slider--summary {
+  width: min(56%, 37rem) !important;
+  max-width: min(56%, 37rem) !important;
+}
+
+/* Measurement Matrix slider: make Pairwise Comparison and Pugh Chart fully fit the slider image height */
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide:has(img[src$="pairwise_comparison.png"]),
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide:has(img[src$="pugh_chart.png"]) {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide img[src$="pairwise_comparison.png"],
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide img[src$="pugh_chart.png"] {
+  display: block !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: 240px !important;
+  min-height: 240px !important;
+  max-height: 240px !important;
+  object-fit: contain !important;
+  background: rgba(10, 18, 34, 0.72) !important;
+}
+
+@media (max-width: 900px) {
+  #ctmf-praxis-measurement-matrix .inline-figure-slider__slide img[src$="pairwise_comparison.png"],
+  #ctmf-praxis-measurement-matrix .inline-figure-slider__slide img[src$="pugh_chart.png"] {
+    height: 240px !important;
+    min-height: 240px !important;
+    max-height: 240px !important;
+  }
+}
+
+/* Measurement Matrix slider: remove forced image-height so Pairwise/Pugh do not leave blank space */
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide img[src$="pairwise_comparison.png"],
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide img[src$="pugh_chart.png"] {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  object-fit: fill !important;
+  background: transparent !important;
+}
+
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide:has(img[src$="pairwise_comparison.png"]),
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide:has(img[src$="pugh_chart.png"]) {
+  align-content: start !important;
+}
+
+/* Global typography refresh: cleaner modern pairing */
+body,
+button,
+input,
+textarea,
+select,
+.site-nav a,
+.portfolio-landing__leadline,
+.card,
+.summary-card,
+.ctmf-card,
+.references-list,
+.ctmf-table,
+figcaption {
+  font-family: "Manrope", "Segoe UI", sans-serif !important;
+}
+
+.hero h1,
+.hero-panel h2,
+.section-intro h2,
+.card h3,
+.portfolio-landing__title,
+.portfolio-landing__title-line,
+.portfolio-landing__title-line--accent,
+.nav-brand,
+.site-nav,
+.card-label,
+.tool-name {
+  font-family: "Outfit", "Manrope", sans-serif !important;
+  letter-spacing: -0.032em !important;
+}
+
+.portfolio-landing__title {
+  font-family: "Outfit", "Manrope", sans-serif !important;
+  font-style: normal !important;
+  letter-spacing: -0.055em !important;
+}
+
+body {
+  font-family: "Manrope", "Segoe UI", sans-serif !important;
+  line-height: 1.72 !important;
+}
+
+p,
+li,
+td,
+th,
+figcaption {
+  letter-spacing: -0.01em;
+}
+
+code,
+pre,
+.strand,
+.section-rail,
+.site-nav__submenu,
+.ctmf-table thead,
+.card-label,
+.portfolio-landing__tag {
+  font-family: "IBM Plex Mono", "Fira Code", "JetBrains Mono", Consolas, monospace !important;
+}
+
+/* Measurement Matrix slider: shrink-wrap Pairwise/Pugh so no extra empty figure area remains */
+#ctmf-praxis-measurement-matrix .inline-figure-slider {
+  width: fit-content !important;
+  max-width: min(100%, 48rem) !important;
+  margin-inline: auto !important;
+}
+
+#ctmf-praxis-measurement-matrix .inline-figure-slider__viewport {
+  width: fit-content !important;
+  max-width: 100% !important;
+}
+
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide:has(img[src$="pairwise_comparison.png"]),
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide:has(img[src$="pugh_chart.png"]) {
+  width: fit-content !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  justify-self: center !important;
+  align-content: start !important;
+}
+
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide img[src$="pairwise_comparison.png"],
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide img[src$="pugh_chart.png"] {
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: min(100%, 48rem) !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  margin-inline: auto !important;
+  background: transparent !important;
+}
+
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide:has(img[src$="pairwise_comparison.png"]) figcaption,
+#ctmf-praxis-measurement-matrix .inline-figure-slider__slide:has(img[src$="pugh_chart.png"]) figcaption {
+  width: 0 !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 900px) {
+  #ctmf-praxis-measurement-matrix .inline-figure-slider,
+  #ctmf-praxis-measurement-matrix .inline-figure-slider__viewport,
+  #ctmf-praxis-measurement-matrix .inline-figure-slider__slide:has(img[src$="pairwise_comparison.png"]),
+  #ctmf-praxis-measurement-matrix .inline-figure-slider__slide:has(img[src$="pugh_chart.png"]) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #ctmf-praxis-measurement-matrix .inline-figure-slider__slide img[src$="pairwise_comparison.png"],
+  #ctmf-praxis-measurement-matrix .inline-figure-slider__slide img[src$="pugh_chart.png"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Global typography refresh: more open, cleaner, easier-to-read modern fonts */
+body,
+button,
+input,
+textarea,
+select,
+.site-nav a,
+.portfolio-landing__leadline,
+.card,
+.summary-card,
+.ctmf-card,
+.references-list,
+.ctmf-table,
+figcaption,
+p,
+li,
+td,
+th {
+  font-family: "Public Sans", "Segoe UI", sans-serif !important;
+}
+
+.hero h1,
+.hero-panel h2,
+.section-intro h2,
+.card h3,
+.portfolio-landing__title,
+.portfolio-landing__title-line,
+.portfolio-landing__title-line--accent,
+.nav-brand,
+.site-nav,
+.card-label,
+.tool-name,
+.home-button {
+  font-family: "Plus Jakarta Sans", "Public Sans", sans-serif !important;
+  letter-spacing: -0.028em !important;
+}
+
+.portfolio-landing__title {
+  font-family: "Plus Jakarta Sans", "Public Sans", sans-serif !important;
+  font-style: normal !important;
+  letter-spacing: -0.045em !important;
+}
+
+body {
+  font-family: "Public Sans", "Segoe UI", sans-serif !important;
+  line-height: 1.76 !important;
+}
+
+p,
+li,
+td,
+th,
+figcaption {
+  letter-spacing: 0 !important;
+}
+
+code,
+pre,
+.strand,
+.section-rail,
+.site-nav__submenu,
+.ctmf-table thead,
+.card-label,
+.portfolio-landing__tag {
+  font-family: "IBM Plex Mono", "Fira Code", "JetBrains Mono", Consolas, monospace !important;
+}
+
+/* Fig. 1 should match the rounded outer frame of the other figures */
+.position-statement .hero-figure,
+.position-statement .hero-figure:hover,
+.position-statement .hero-figure:focus-within {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  clip-path: none !important;
+}
+
+/* Global typography refresh: Nunito for readability, Plus Jakarta Sans for polished headings */
+body,
+button,
+input,
+textarea,
+select,
+.site-nav a,
+.portfolio-landing__leadline,
+.card,
+.summary-card,
+.ctmf-card,
+.references-list,
+.ctmf-table,
+figcaption,
+p,
+li,
+td,
+th {
+  font-family: "Nunito", "Segoe UI", sans-serif !important;
+}
+
+.hero h1,
+.hero-panel h2,
+.section-intro h2,
+.card h3,
+.portfolio-landing__title,
+.portfolio-landing__title-line,
+.portfolio-landing__title-line--accent,
+.nav-brand,
+.site-nav,
+.tool-name,
+.home-button {
+  font-family: "Plus Jakarta Sans", "Nunito", sans-serif !important;
+  letter-spacing: -0.026em !important;
+}
+
+.portfolio-landing__title {
+  font-family: "Plus Jakarta Sans", "Nunito", sans-serif !important;
+  font-style: normal !important;
+  letter-spacing: -0.04em !important;
+}
+
+body {
+  font-family: "Nunito", "Segoe UI", sans-serif !important;
+  line-height: 1.78 !important;
+}
+
+p,
+li,
+td,
+th,
+figcaption {
+  letter-spacing: 0 !important;
+}
+
+code,
+pre,
+.strand,
+.section-rail,
+.site-nav__submenu,
+.ctmf-table thead,
+.card-label,
+.portfolio-landing__tag {
+  font-family: "IBM Plex Mono", "Fira Code", "JetBrains Mono", Consolas, monospace !important;
+}
+
+/* Heading/title refresh: Outfit for cleaner modern display typography */
+.hero h1,
+.hero-panel h2,
+.section-intro h2,
+.card h3,
+.portfolio-landing__title,
+.portfolio-landing__title-line,
+.portfolio-landing__title-line--accent,
+.nav-brand,
+.tool-name,
+.home-button {
+  font-family: "Outfit", "Nunito", sans-serif !important;
+  letter-spacing: -0.03em !important;
+}
+
+.portfolio-landing__title {
+  font-family: "Outfit", "Nunito", sans-serif !important;
+  font-style: normal !important;
+  letter-spacing: -0.045em !important;
+}
