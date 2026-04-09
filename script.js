@@ -15,6 +15,10 @@ const navigationEntry = performance.getEntriesByType?.("navigation")?.[0] ?? nul
 const shouldRestoreScroll = navigationEntry?.type === "reload";
 let hasRestoredInitialScroll = false;
 
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
 const WHEEL_ITEM_SPACING = 52;
 
 let activeSectionIndex = 0;
@@ -378,19 +382,50 @@ function persistScrollPosition() {
   }
 }
 
+function getReloadTargetSection() {
+  const hashTargetId = window.location.hash ? decodeURIComponent(window.location.hash.slice(1)) : "";
+  const hashTarget = hashTargetId ? document.getElementById(hashTargetId) : null;
+  const hashSection = hashTarget?.closest?.(".section-shell") ?? hashTarget;
+
+  if (hashSection instanceof HTMLElement) {
+    return hashSection;
+  }
+
+  const savedScrollPosition = readSavedScrollPosition();
+  if (savedScrollPosition === null) {
+    return null;
+  }
+
+  const probeY = savedScrollPosition + 120;
+  let bestSection = null;
+
+  sectionRailLinks.forEach((link) => {
+    const section = document.getElementById(link.dataset.sectionLink);
+    if (!(section instanceof HTMLElement)) {
+      return;
+    }
+
+    if (section.offsetTop <= probeY) {
+      bestSection = section;
+    }
+  });
+
+  return bestSection;
+}
+
 function restoreInitialScrollPosition() {
   if (hasRestoredInitialScroll || !shouldRestoreScroll) {
     return;
   }
 
-  const savedScrollPosition = readSavedScrollPosition();
-  if (savedScrollPosition === null) {
-    hasRestoredInitialScroll = true;
+  hasRestoredInitialScroll = true;
+
+  const targetSection = getReloadTargetSection();
+  if (!targetSection) {
     return;
   }
 
-  hasRestoredInitialScroll = true;
-  window.scrollTo(0, savedScrollPosition);
+  targetSection.scrollIntoView({ behavior: "auto", block: "start" });
 }
 
 function initializePageState() {
@@ -942,6 +977,8 @@ ctmfNavLinks.forEach((link) => {
     }
   });
 });
+
+
 
 
 

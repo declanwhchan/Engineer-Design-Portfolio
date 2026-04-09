@@ -6501,3 +6501,84 @@ pre,
   font-style: normal !important;
   letter-spacing: -0.045em !important;
 }
+
+/* Praxis I Classical Brainstorm: add breathing room between Fig. 4 and Fig. 5 */
+#ctmf-praxis-classical-brainstorm .ctmf-inline-gallery {
+  gap: 1.35rem !important;
+}
+
+/* Praxis I Classical Brainstorm: larger spacing between Fig. 4 and Fig. 5 */
+#ctmf-praxis-classical-brainstorm .ctmf-inline-gallery {
+  gap: 2rem !important;
+}
+
+/* Praxis I Classical Brainstorm: stack Fig. 4 and Fig. 5 vertically with extra spacing */
+#ctmf-praxis-classical-brainstorm .ctmf-inline-gallery {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 2rem !important;
+}
+
+/* Fig. 15: enlarge the Robot Arm summary figure while preserving text wrap */
+#robot-arm .summary-card > .ctmf-inline-gallery__item:has(img[src$="robotarm.png"]) {
+  width: 52% !important;
+  max-width: 52% !important;
+}
+
+
+/* Praxis II Requirements: Beta Release requirements slider beside Future Implications */
+#ctmf-praxis-2-reflection-framework > .inline-figure-slider.inline-figure-slider--requirements {
+  float: right !important;
+  clear: right !important;
+  width: min(50%, 32rem) !important;
+  max-width: min(50%, 32rem) !important;
+  margin: 0.15rem 0 1rem 1.4rem !important;
+}
+
+#ctmf-praxis-2-reflection-framework > .inline-figure-slider.inline-figure-slider--requirements .inline-figure-slider__viewport,
+#ctmf-praxis-2-reflection-framework > .inline-figure-slider.inline-figure-slider--requirements .inline-figure-slider__slide {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+#ctmf-praxis-2-reflection-framework > .inline-figure-slider.inline-figure-slider--requirements .inline-figure-slider__slide img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 28rem !important;
+  min-height: 28rem !important;
+  max-height: 28rem !important;
+  object-fit: contain !important;
+  background: rgba(10, 18, 34, 0.72) !important;
+}
+
+#ctmf-praxis-2-reflection-framework > .inline-figure-slider.inline-figure-slider--requirements .inline-figure-slider__slide figcaption {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 900px) {
+  #ctmf-praxis-2-reflection-framework > .inline-figure-slider.inline-figure-slider--requirements {
+    float: none !important;
+    clear: both !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0 0 !important;
+  }
+
+  #ctmf-praxis-2-reflection-framework > .inline-figure-slider.inline-figure-slider--requirements .inline-figure-slider__slide img {
+    height: 22rem !important;
+    min-height: 22rem !important;
+    max-height: 22rem !important;
+  }
+}
+
+/* Praxis II Requirements slider: let the largest page define the frame without extra empty space */
+#ctmf-praxis-2-reflection-framework > .inline-figure-slider.inline-figure-slider--requirements .inline-figure-slider__slide img {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  background: transparent !important;
+}
+
